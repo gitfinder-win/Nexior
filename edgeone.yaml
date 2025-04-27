@@ -1,0 +1,13 @@
+name: nexior-ai
+build:
+  commands:
+    - npm install
+    - npm run build
+dist: dist
+routes:
+  - pattern: /*
+    static:
+      dir: dist
+  - pattern: /api/*
+    edge_function:
+      dir: api

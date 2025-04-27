@@ -49,6 +49,8 @@ export default defineConfig((config: ConfigEnv) => {
     },
     build: {
       sourcemap: false,
+      target: 'esnext',
+      outDir: 'dist',
       rollupOptions: {
         output: {
           manualChunks(id) {
